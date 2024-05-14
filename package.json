@@ -1,0 +1,63 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "to do list backend application",
+  "repository": "https://github.com/jessicamillenia/ToDoList_BE",
+  "scripts": {
+    "start": "nodemon",
+    "clean-install": "rimraf node_modules package-lock.json && npm install",
+    "test": "nyc ava --verbose",
+    "lint": "eslint './src/**/*.{js,ts}' --fix",
+    "build": "npm run lint && rimraf ./build && ./node_modules/typescript/bin/tsc"
+  },
+  "author": "Jessica Millenia",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "~5.59.6",
+    "@typescript-eslint/parser": "~5.59.6",    
+    "@types/multer": "~1.4.7",
+    "eslint-plugin-import": "~2.27.4",
+    "ava": "~5.1.0",
+    "eslint": "~8.31.0",
+    "nodemon": "~3.0.1",
+    "sequelize-cli": "~6.5.2",
+    "sinon": "~16.1.1",
+    "ts-node": "~10.9.2",
+    "typescript": "~5.4.5",
+    "@types/bluebird": "~3.5.36",
+    "@types/dotenv": "~6.1.1",
+    "@types/node": "~20.12.11",
+    "@types/sinon": "~7.5.2",
+    "@types/uuid": "~8.3.1",
+    "nyc": "~15.1.0",
+    "test-listen": "~1.1.0"
+  },
+  "dependencies": {
+    "@fast-csv/parse": "~4.3.6",
+    "joi": "~17.7.0",
+    "@joi/date": "~2.1.0",
+    "file-type": "~16.5.3",
+    "form-data": "~4.0.0",
+    "express": "~4.18.2",
+    "moment": "~2.29.4",
+    "moment-timezone": "~0.5.40",
+    "multer": "~1.4.5-lts.1",
+    "bluebird": "~3.7.2",
+    "uuid": "~9.0.0",
+    "axios": "~1.6.1",
+    "dotenv": "~16.0.3",
+    "pg": "~8.6.0"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register/transpile-only"
+    ],
+    "files": [
+      "./tests/**/*.test.ts"
+    ],
+    "timeout": "1m"
+  }
+}
