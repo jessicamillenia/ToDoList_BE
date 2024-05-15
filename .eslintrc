@@ -39,7 +39,8 @@
         "@typescript-eslint/no-unused-vars": ["error", { "args": "none" }],
         "@typescript-eslint/no-non-null-assertion": "off",
         "no-trailing-spaces": "error",
-        "import/no-extraneous-dependencies": "error"
+        "import/no-extraneous-dependencies": "error",
+        "@typescript-eslint/triple-slash-reference": "off"
     }
   }
   

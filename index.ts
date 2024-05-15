@@ -11,7 +11,7 @@ import App from './src/app';
     const serverMode = process.argv[2];
 
     /** instantiate and start server  */
-    const app = new App({ port, syspar: true, statefulFeatureFlag: true, serverMode });
+    const app = new App({ port, serverMode });
     await app.initialize();
     app.start();
 })();
